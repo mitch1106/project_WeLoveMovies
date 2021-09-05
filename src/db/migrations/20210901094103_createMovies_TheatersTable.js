@@ -5,6 +5,7 @@ exports.up = function (knex) {
         table.integer("theater_id");
         table.foreign("theater_id").references("theater_id").inTable("theaters").onDelete("cascade");
         table.boolean("is_showing");
+        table.timestamps(true, true);
     })
 }
 
