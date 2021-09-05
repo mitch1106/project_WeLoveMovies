@@ -3,7 +3,7 @@ const knex= require("../db/connection");
 
 function list(isShowing) {
     return knex('movies as m')
-    .select('m*')
+    .select('m.*')
     .modify((queryBuilder) => {
         if(isShowing) {
             queryBuilder
